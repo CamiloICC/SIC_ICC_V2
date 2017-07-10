@@ -1,0 +1,142 @@
+<?php
+include '../bd/conexion.php';
+?>
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+
+<title>ICC Mobile</title>
+<link rel="stylesheet" type="text/css" href="../libs/jquery.mobile-1.2.0/jquery.mobile-1.2.0.css">
+<link href="../assets/css/estilo.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../libs/jquery.mobile-1.2.0/jquery.js"></script>
+
+
+
+<script type="text/javascript" src="../libs/jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+
+<script type="text/javascript">
+	function campage(){
+		$("#incluirPagina").load("index.html");
+	}
+
+	function abrir_face(){
+		if(confirm("Abrir con Facebook APP"))
+		document.location.href="fb://page/183681255003002";
+		else
+		document.location.href="https://www.facebook.com/Superintendenciadeindustriaycomercio/"; 
+	}
+	function getSummary(id) {
+		$.ajax({
+     			type: "POST",
+			url: 'departamento.php',
+			//data: "id=" + id, // appears as $_GET['id'] @ your backend side
+			/*success: function(data) {
+				// data is ur summary
+				//$('#summary').html(data+"22");
+				$('#summary').text("22");
+				//document.getElementById("summary").innerHTML="1";
+				alert(data);
+	     		}*/
+			dataType: 'html',
+    			//data: {func: 'toptable', user_id: uname},
+			beforeSend: function() {
+        			$('#summary111').html('checking');
+    			},
+    			complete: function() {},
+    			success: function(html) {
+        			$('#summary111').html(html);
+				alert(html);
+			}
+
+		   });
+
+	}
+  </script>
+</head>
+<body onload="campage()">
+
+<div id="#summary111">This text will be replaced when the onclick event (link is clicked) is triggered.</div>
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+    	<h1>SIC RESPONDE</h1>
+        <!--  <a>Principal</a> -->                       
+    </div>
+    <div data-role="content" >
+     <div align="center"><img src="../assets/img/sic.jpg" width="100%"/></div>
+ 	<div data-role="controlgroup" data-type="vertical" align="center " >
+
+
+
+<form action="#" method="post" data-ajax="false">
+<label >Especialidad:</label>
+	<select name="" id="" value="">
+		<?php
+		$query = "SELECT * FROM ESPECIALIDAD WHERE ESTADO = 0";
+		$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+			echo "<option value='".$line['ID_ESPECIALIDAD']."'>".$line['ESPECIALIDAD']."</option>";
+		}		
+		?>
+	</select>
+<label >Departamento:</label>
+	<input type="text" name="" id="" value="">
+	<a onclick="getSummary('1')">View Text</a>
+<label >Ciudad:</label>
+	<input type="text" name="" id="" value="">
+<label >Sede:</label>
+	<input type="text" name="" id="" value="">
+<label >Especialista:</label>
+	<input type="text" name="" id="" value="">
+<label >Fecha / Hora cita:</label>
+	<input type="text" name="" id="" value="">
+<label >Medio Atención:</label>
+	<input type="text" name="" id="" value="">
+<label >Asunto:</label>
+	<input type="text" name="" id="" value="">
+<label >Motivo Cita:</label>
+	<input type="text" name="" id="" value="">
+<label >Descripción:</label>
+	<textarea></textarea>
+<label >Numero de Documento:</label>
+	<input type="text" name="" id="" value="">
+<label >Tipo Documento:</label>
+	<input type="text" name="" id="" value="">
+<label >Nombres Cliente:</label>
+	<input type="text" name="" id="" value="">
+<label >Apellido Cliente:</label>
+	<input type="text" name="" id="" value="">
+<label >Telefono Fijo:</label>
+	<input type="text" name="" id="" value="">
+<label >Extensi&oacute;n:</label>
+	<input type="text" name="" id="" value="">
+<label >Tel&eacute;fono Celular:</label>
+	<input type="text" name="" id="" value="">
+<label >Fecha Nacimiento:</label>
+	<input type="text" name="" id="" value="">
+<label >Correo Electronico:</label>
+	<input type="text" name="" id="" value="">
+<label >Dirección:</label>
+	<input type="text" name="" id="" value="">
+<label >Departamento residencia:</label>
+	<input type="text" name="" id="" value="">
+<label >Ciudad residencia:</label>
+	<input type="text" name="" id="" value="">
+<input type="submit" data-role="button" value="ENVIAR">
+</form>
+
+        </div>
+		<div align="center"><a href="http://www.sic.gov.co/sites/default/files/files/Politicas_Habeas_Data_0.pdf"><img src="assets/img/politica.png" width="100%"/></a></div>		
+    </div>
+    <div data-role="footer" align="center" class="footer">
+	<!--  &nbsp; -->
+
+  		<p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p> 
+    </div>
+</div>
+
+
+</body>
+</html>
+

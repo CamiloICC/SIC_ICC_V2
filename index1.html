@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+
+<title>ICC Mobile</title>
+<link rel="stylesheet" type="text/css" href="libs/jquery.mobile-1.2.0/jquery.mobile-1.2.0.css">
+<link href="assets/css/estilo.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="libs/jquery.mobile-1.2.0/jquery.js"></script>
+
+
+<script type="text/javascript" src="libs/jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+
+<script type="text/javascript">
+  
+
+    function campage(){
+
+      $("#incluirPagina").load("index.html");
+  }
+
+	function abrir_face(){
+		if(confirm("Abrir con Facebook APP"))
+		document.location.href="fb://page/183681255003002";
+		else
+		document.location.href="https://www.facebook.com/Superintendenciadeindustriaycomercio/"; 
+	}
+  </script>
+</head>
+<body onload="campage()">
+
+<div data-role="page" data-theme="b">
+	<div data-role="header">
+    	<h1>SIC RESPONDE</h1>
+        <!--  <a>Principal</a> -->                       
+    </div>
+    <div data-role="content" >
+     <div align="center"><img src="assets/img/sic.jpg" width="100%"/></div>
+ 	<div data-role="controlgroup" data-type="vertical" align="center " >
+		<table width="100%" height="100%" border="0" align="center" cellspacing="5" cellpadding="5">
+		<tr>
+			<td><a data-role="botonhor" href="#chat"><img src="assets/img/Chat.png" /></a></td>
+			<td><a data-role="botonhor" href="tel:0315920400"><img src="assets/img/atencion_ciudadano1.png" /></a></td>
+		</tr>
+		<tr>
+			<td><a data-role="botonhor" href="#correo"><img src="assets/img/Correo.png" /></a></td>
+			<td><a data-role="botonhor" onclick="abrir_face();" ><img src="assets/img/Facebook.png" /></a></td>
+			<!-- <td><a data-role="botonhor" href="fb://page/183681255003002"><img src="assets/img/Facebook.png" /></a></td> -->
+		</tr>
+		<tr>
+			<td><a data-role="botonhor" href="https://twitter.com/sicsuper" target="_blank"><img src="assets/img/Twitter.png" /></a></td>
+			<!-- <td><a data-role="botonhor" href="vnd.youtube:Or_zz7Ii6-0"><img src="assets/img/YouTube.png" /></a></td> -->
+			<td><a data-role="botonhor" href="https://www.youtube.com/user/superintendencia2011"><img src="assets/img/YouTube.png" /></a></td>
+		</tr>
+		<tr>
+			<td><a data-role="botonhor" href="#puntos"><img src="assets/img/Puntos.png" /></a></td>
+			<td><a data-role="botonhor" href=""><img src="assets/img/Video_Llamada.png" /></a></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><a data-role="botonhor" href="agenda/agenda.php"><img src="assets/img/agendamiento.png" /></a></td>
+		</tr>
+		</table>
+	    	<!-- <a data-role="botonhor" href="#contact"><img src="assets/img/atencion_ciudadano1.png" /></a>
+	    	<a data-role="botonhor" href="#medios"><img src="assets/img/oficina_virtual_pi.png" /></a><br />
+	    	<a data-role="botonhor" href="#contact"><img src="assets/img/atencion_ciudadano1.png" /></a>
+	    	<a data-role="botonhor" href="#medios"><img src="assets/img/oficina_virtual_pi.png" /></a><br />
+	    	<a data-role="botonhor" href="#contact"><img src="assets/img/atencion_ciudadano1.png" /></a>
+	    	<a data-role="botonhor" href="#medios"><img src="assets/img/oficina_virtual_pi.png" /></a><br />
+	    	 <a data-role="button" href="#conex"><img src="assets/img/atencion_ciudadano.png" /></a> -->
+	    	<!-- <a data-role="button" href="#report">Reporte</a> -->
+    	   <!-- <a data-role="button" href="#redes">Redes Sociales
+        	<a data-role="button" href="#">Directorio</a> -->
+        </div>
+		<div align="center"><a href="http://www.sic.gov.co/sites/default/files/files/Politicas_Habeas_Data_0.pdf"><img src="assets/img/politica.png" width="100%"/></a></div>		
+    </div>
+    <div data-role="footer" align="center" class="footer">
+	<!--  &nbsp; -->
+
+  		<p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p> 
+    </div>
+</div>
+
+
+
+<div data-role="page" id="#puntosesp" data-add-back-btn="true" data-theme="b">
+        <div data-role="header">
+        <h1>Puntos de atención</h1>
+        </div>
+    <div data-role="content">
+
+ </div>
+     <div data-role="footer" align="center" class="footer">
+  <!--  &nbsp; -->
+                <p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p>
+    </div>
+</div>
+
+
+
+
+<!-- Pagina 1 -->
+<div data-role="page" id="puntos" data-add-back-btn="true" data-theme="b">
+	<div data-role="header">
+    	<h1>Puntos de atención</h1>
+	</div>
+    <div data-role="content">
+		<table data-role="table" id="temp-table" data-mode="reflow" class="ui-responsive table-stroke">
+    <thead>
+        <tr>
+            <th data-priority="persist" class="tspuntos">Ciudad</th>
+            <th data-priority="1" class="tspuntos">Sede</th>
+            <th data-priority="1" class="tspuntos">Horario</th>
+            <th data-priority="1" class="tspuntos">Ver m&aacute;s</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tspuntos" >Cali</td>
+            <td>Supersociedades</td>
+            <td class="tspuntos">8 - 12 y 1-5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=0" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Medellin</td>
+            <td>Supersociedades</td>
+            <td class="tspuntos">8 - 12 y 1-5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=1" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos">Cúcuta</td>
+            <td>Supersociedades</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=2" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Sam Andres</td>
+            <td>MINCIT</td>
+            <td class="tspuntos">8 - 12 y 2 - 6 pm </td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=3" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Manizales</td>
+            <td>MINCIT</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=4" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Barranquilla</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=5" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Popayan</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=6" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Pereira</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=7" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Armenia</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=8" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Monteria</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=9" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Ibague</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=10" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Neiva</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=11" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Villavicencio</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=12" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Bucaramanga</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=13" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Cartagena</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=14" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Pasto</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=15" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+        <tr>
+            <td class="tspuntos" >Sincelejo</td>
+            <td>Casa del Consumidor</td>
+            <td class="tspuntos">8 - 12 y 1 - 5 pm</td>
+            <th><a  data-ajax="false" href="puntos.php?idpunto=16" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Ver M&aacute;s</a></th>
+        </tr>
+	</tbody>
+</table>     
+	</div> 
+     <div data-role="footer" align="center" class="footer">
+  <!--  &nbsp; -->
+  		<p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p> 
+    </div>	
+</div> 
+ 
+<!-- Pagina 2 -->
+<div data-role="page" id="chat" data-add-back-btn="true" data-theme="b"> 
+	<div data-role="header">
+    	<h1>Conexión y servicios</h1>
+	</div>
+    <div data-role="content">
+		<iframe src="http://gestionicc.interactivo.com.co/chatsic/mobile.html" height="805px" width="100%" frameborder="0"></iframe>
+	</div> 
+     <div data-role="footer" align="center" class="footer">
+  <!--  &nbsp; -->
+  		<p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p> 
+    </div>	
+</div> 
+
+<!-- Pagina 3 -->
+<div data-role="page" id="correo" data-add-back-btn="true" data-theme="b">
+        <div data-role="header">
+        <h1>SIC Responde</h1>
+        </div>
+    <div data-role="content">
+<form action="enviar_correo.php" method="post" data-ajax="false">
+<label >Nombre y Apellido:</label>
+<input type="text" name="nombre" id="nombre" value="">
+<label for="">Documento de Identidad:</label>
+<input type="text" name="documento" id="" value="">
+<label for="">Correo Electr&oacute;nico:</label>
+<input type="text" name="correo" id="" value="">
+<label for="select-choice-8" class="select">Tipo de Solicitud:</label>
+<select name="tipo_solicitud"  data-icon="grid" data-iconpos="left">
+    <option value="">---</option>
+        <option value="Tramite">Tramite</option>
+        <option value="Requisitos para la presentación de Demandas." >Requisitos para <br> la presentación de Demandas.</option>
+        <option value="Requisitos para la presentación de Denuncias." >Requisitos para la \n  presentación de Denuncias.</option>
+        <option value="Información de registro fabricantes e importadores." >Información de registro fabricantes e importadores.</option>
+        <option value="Vía Administrativa para los Servicios de Comunicaciones y
+Servicios Postales." >Vía Administrativa para los Servicios de Comunicaciones y
+Servicios Postales.</option>
+        <option value="Cámaras de Comercio." >Cámaras de Comercio.</option>
+        <option value="Registro Nacional de Avaluadores. " >Registro Nacional de Avaluadores. </option>
+        <option value="Competencia Desleal. " >Competencia Desleal. </option>
+        <option value="Protección de Datos personales." >Protección de Datos personales.</option>
+        <option value="Registro Nacional de Bases de Datos (RNBD) " >Registro Nacional de Bases de Datos (RNBD) </option>
+        <option value="Reglamentos Técnicos y Metrología Legal." >Reglamentos Técnicos y Metrología Legal.</option>
+        <option value="¿Información sobre SIC Facilita? ingresa al enlace" >¿Información sobre SIC Facilita? ingresa al enlace</option>
+        <option value="¿Solicitud de Copias? ingresa a la plataforma Sede
+Electrónica en el enlace " >¿Solicitud de Copias? ingresa a la plataforma Sede
+Electrónica en el enlace </option>
+        <option value="¿Propiedad Industrial? ingresa a la plataforma SIPI en el
+enlace:" >¿Propiedad Industrial? ingresa a la plataforma SIPI en el
+enlace:</option>
+</select>
+<label for="num_radicado">Numero Radicado Base:</label>
+<input type="text" name="num_radicado" id="" value="">
+<label for="objeto">Objeto de la petición:</label>
+<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+<input type="submit" data-role="button" value="ENVIAR">
+</form>
+
+        </div>
+     <div data-role="footer" align="center" class="footer">
+  <!--  &nbsp; -->
+  		<p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p> 
+    </div>
+</div>
+<!-- Pagina 4 -->
+<div data-role="page" id="agendamiento" data-add-back-btn="true" data-theme="b">
+        <div data-role="header">
+        <h1>SIC Responde</h1>
+        </div>
+    <div data-role="content">
+<form action="#" method="post" data-ajax="false">
+<label >Especialidad:</label>
+	<input type="text" name="" id="" value="">
+<label >Departamento:</label>
+	<input type="text" name="" id="" value="">
+<label >Ciudad:</label>
+	<input type="text" name="" id="" value="">
+<label >Sede:</label>
+	<input type="text" name="" id="" value="">
+<label >Especialista:</label>
+	<input type="text" name="" id="" value="">
+<label >Fecha / Hora cita:</label>
+	<input type="text" name="" id="" value="">
+<label >Medio Atención:</label>
+	<input type="text" name="" id="" value="">
+<label >Asunto:</label>
+	<input type="text" name="" id="" value="">
+<label >Motivo Cita:</label>
+	<input type="text" name="" id="" value="">
+<label >Descripción:</label>
+	<textarea></textarea>
+<label >Numero de Documento:</label>
+	<input type="text" name="" id="" value="">
+<label >Tipo Documento:</label>
+	<input type="text" name="" id="" value="">
+<label >Nombres Cliente:</label>
+	<input type="text" name="" id="" value="">
+<label >Apellido Cliente:</label>
+	<input type="text" name="" id="" value="">
+<label >Telefono Fijo:</label>
+	<input type="text" name="" id="" value="">
+<label >Extensi&oacute;n:</label>
+	<input type="text" name="" id="" value="">
+<label >Tel&eacute;fono Celular:</label>
+	<input type="text" name="" id="" value="">
+<label >Fecha Nacimiento:</label>
+	<input type="text" name="" id="" value="">
+<label >Correo Electronico:</label>
+	<input type="text" name="" id="" value="">
+<label >Dirección:</label>
+	<input type="text" name="" id="" value="">
+<label >Departamento residencia:</label>
+	<input type="text" name="" id="" value="">
+<label >Ciudad residencia:</label>
+	<input type="text" name="" id="" value="">
+<input type="submit" data-role="button" value="ENVIAR">
+</form>
+
+        </div>
+     <div data-role="footer" align="center" class="footer">
+  <!--  &nbsp; -->
+                <p style="font-size:12px;">Copyright Procesos y soluciones Interactivo Contact Center 2017.</p>
+    </div>
+</div>
+
+
+</body>
+</html>
+

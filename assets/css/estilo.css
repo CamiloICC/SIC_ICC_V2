@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+.footer{
+	//background-image:url(../img/logo.png);
+	background-repeat:no-repeat;
+	text-align:center;
+	alignment-adjust:central;
+	background-position:center;
+	min-height:30px;
+	color:white;
+		
+}
+.tspuntos{
+	
+	background-color:#B0C4DE;
+
+}
